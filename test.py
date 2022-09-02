@@ -1,8 +1,11 @@
-import time
-
 class Eggs:
-    def __init__(self) -> None:
-        pass
+    def __init__(self, spam) -> None:
+        self.spam = spam
 
-def foo(spam: Eggs):
-    pass
+class Spam:
+    def __init__(self) -> None:
+        self.name = "Spam"
+
+def foo(spam: Spam) -> Eggs:
+    eggs = Eggs(spam= spam)
+    return eggs
